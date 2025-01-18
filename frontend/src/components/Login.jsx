@@ -1,5 +1,7 @@
+import Form from "./Form"
+
 function Login() {
-    return <div>Login</div>
+    return <Form route="api/user/login/" method="login" /> 
 }
 
 export default Login
