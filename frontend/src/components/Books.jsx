@@ -1,6 +1,8 @@
 import "../styles/Note.css"
+import PropTypes from 'prop-types';
 
 function Book({ book, onDelete }) {
+    // eslint-disable-next-line no-unused-vars
     const formattedDate = new Date(book.created_at).toLocaleDateString("en-US");
     
   return (
@@ -14,4 +16,14 @@ function Book({ book, onDelete }) {
     </div>
   );
 }
+Book.propTypes = {
+  book: PropTypes.shape({
+      id: PropTypes.number.isRequired,
+      title: PropTypes.string.isRequired,
+      content: PropTypes.string.isRequired,
+      created_at: PropTypes.string.isRequired,
+  }).isRequired,
+  onDelete: PropTypes.func.isRequired,
+};
+
 export default Book
