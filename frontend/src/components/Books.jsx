@@ -1,4 +1,4 @@
-import React from "react";
+import "../styles/Note.css"
 
 function Book({ book, onDelete }) {
     const formattedDate = new Date(book.created_at).toLocaleDateString("en-US");

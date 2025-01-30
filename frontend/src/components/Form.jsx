@@ -4,6 +4,7 @@ import { useNavigate } from "react-router-dom";
 import { ACCESS_TOKEN, REFRESH_TOKEN } from "../constants";
 import "../styles/Form.css"
 import PropTypes from "prop-types"; // Import prop-types
+import { LoadingIndicator } from "./LoadingIndicator";
 // import LoadingIndicator from "./LoadingIndicator";
 
 function Form({ route, method }) {
@@ -52,6 +53,7 @@ function Form({ route, method }) {
                 placeholder="Password"
             />
             {/* {loading && <LoadingIndicator />} */}
+            {loading && <LoadingIndicator />}
             <button className="form-button" type="submit" disabled={loading}>
                 {name}
             </button>
